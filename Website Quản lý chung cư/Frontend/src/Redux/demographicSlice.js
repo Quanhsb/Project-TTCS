@@ -1,0 +1,28 @@
+import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
+export const resetDemographicSlice = createAction("resetDemographicSlice");
+const initialState = {
+    demographicList: [],
+    isLoading: false,
+};
+const demographicSlice = createSlice({
+    name: "demographic",
+    initialState,
+    reducers: {},
+    extraReducers: {
+        [fetchAllDemographic.pending]: (state) => {
+            console.log("pending");
+            state.isLoading = true;
+        },
+        [fetchAllDemographic.fulfilled]: (state, action) => {
+            console.log("actiion ful", action);
+            state.isLoading = false;
+            state.demographicList = action?.payload?.data;
+        },
+        [fetchAllDemographic.rejected]: (state, action) => {
+            console.log("action rej", action);
+            state.isLoading = false;
+        },
+        [resetDemographicSlice]: () => initialState
+    }
+});
+export default demographicSlice.reducer;
