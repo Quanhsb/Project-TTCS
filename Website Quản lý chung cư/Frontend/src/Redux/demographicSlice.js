@@ -1,4 +1,16 @@
 import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
+import demographicService from "../Services/API/demographicService";
+export const fetchAllDemographic = createAsyncThunk(
+    "demographic/fetchAllDemographic",
+    async (_, thunkAPI) => {
+        try {
+            return await demographicService.getListDemographic();
+        } catch (e) {
+            console.log("error", e);
+            return thunkAPI.rejectWithValue("something went wrong");
+        }
+    }
+);
 export const resetDemographicSlice = createAction("resetDemographicSlice");
 const initialState = {
     demographicList: [],

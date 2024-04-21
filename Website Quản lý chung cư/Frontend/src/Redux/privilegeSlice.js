@@ -1,4 +1,16 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import privilegeService from "../Services/API/privilegeService";
+export const fetchRoleList = createAsyncThunk(
+  "privilege/fetchRoleList",
+  async (_, thunkAPI) => {
+    try {
+      return await privilegeService.getRoleList();
+    } catch (e) {
+      console.log("error", e);
+      return thunkAPI.rejectWithValue("something went wrong");
+    }
+  }
+);
 const initialState = {
   privilegeList: [],
   roleList: [],

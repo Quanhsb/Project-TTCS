@@ -1,0 +1,15 @@
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\bin\Debug\net6.0\CNPM.Repository.deps.json
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\bin\Debug\net6.0\CNPM.Repository.dll
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\bin\Debug\net6.0\CNPM.Repository.pdb
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\bin\Debug\net6.0\CNPM.Core.dll
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\bin\Debug\net6.0\CNPM.Core.pdb
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\obj\Debug\net6.0\CNPM.Repository.csproj.AssemblyReference.cache
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\obj\Debug\net6.0\CNPM.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\obj\Debug\net6.0\CNPM.Repository.AssemblyInfoInputs.cache
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\obj\Debug\net6.0\CNPM.Repository.AssemblyInfo.cs
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\obj\Debug\net6.0\CNPM.Repository.csproj.CoreCompileInputs.cache
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\obj\Debug\net6.0\CNPM.Rep.DB8A423B.Up2Date
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\obj\Debug\net6.0\CNPM.Repository.dll
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\obj\Debug\net6.0\refint\CNPM.Repository.dll
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\obj\Debug\net6.0\CNPM.Repository.pdb
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Repository\obj\Debug\net6.0\ref\CNPM.Repository.dll

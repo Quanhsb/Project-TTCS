@@ -1,4 +1,16 @@
 import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
+import tabernacleService from "../Services/API/tabernacleService";
+export const fetchAllTabernacles = createAsyncThunk(
+    "tabernacle/fetchAllTabernacles",
+    async (_, thunkAPI) => {
+        try {
+            return await tabernacleService.getListTabernacle();
+        } catch (e) {
+            console.log("error", e);
+            return thunkAPI.rejectWithValue("something went wrong");
+        }
+    }
+);
 export const resetTabernacleSlice = createAction("resetTabernacleSlice");
 const initialState = {
     tabernacleList: [],

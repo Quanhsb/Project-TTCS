@@ -1,4 +1,38 @@
 import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
+import revenueService from "../Services/API/revenueService";
+export const fetchAllRevenue = createAsyncThunk(
+    "revenue/fetchAllRevenue",
+    async (_, thunkAPI) => {
+        try {
+            return await revenueService.getListRevenue();
+        } catch (e) {
+            console.log("error", e);
+            return thunkAPI.rejectWithValue("something went wrong");
+        }
+    }
+);
+export const fetchRevenueItem = createAsyncThunk(
+    "revenue/fetchRevenueItem",
+    async (maKhoanThu, thunkAPI) => {
+        try {
+            return await revenueService.getRevenue(maKhoanThu);
+        } catch (e) {
+            console.log("error", e);
+            return thunkAPI.rejectWithValue("something went wrong");
+        }
+    }
+)
+export const fetchAllRevenueHouse = createAsyncThunk(
+    "revenue/fetchAllRevenueHouse",
+    async (maHoKhau, thunkAPI) => {
+        try {
+            return await revenueService.getRevenueHouse(maHoKhau);
+        } catch (e) {
+            console.log("error", e);
+            return thunkAPI.rejectWithValue("something went wrong");
+        }
+    }
+)
 export const setRevenueItemID = createAction("setRevenueItemID");
 export const setRevenueItemType = createAction("setRevenueItemType");
 export const setRevenueHouseID = createAction("setRevenueHouseID");

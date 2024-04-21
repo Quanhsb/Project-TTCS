@@ -1,0 +1,17 @@
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\bin\Debug\net6.0\CNPM.Service.deps.json
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\bin\Debug\net6.0\CNPM.Service.dll
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\bin\Debug\net6.0\CNPM.Service.pdb
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\bin\Debug\net6.0\CNPM.Core.dll
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\bin\Debug\net6.0\CNPM.Repository.dll
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\bin\Debug\net6.0\CNPM.Core.pdb
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\bin\Debug\net6.0\CNPM.Repository.pdb
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\obj\Debug\net6.0\CNPM.Service.csproj.AssemblyReference.cache
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\obj\Debug\net6.0\CNPM.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\obj\Debug\net6.0\CNPM.Service.AssemblyInfoInputs.cache
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\obj\Debug\net6.0\CNPM.Service.AssemblyInfo.cs
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\obj\Debug\net6.0\CNPM.Service.csproj.CoreCompileInputs.cache
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\obj\Debug\net6.0\CNPM.Ser.A7786ABD.Up2Date
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\obj\Debug\net6.0\CNPM.Service.dll
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\obj\Debug\net6.0\refint\CNPM.Service.dll
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\obj\Debug\net6.0\CNPM.Service.pdb
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Service\obj\Debug\net6.0\ref\CNPM.Service.dll

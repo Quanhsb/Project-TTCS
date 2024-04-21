@@ -1,4 +1,16 @@
 import { createSlice, createAsyncThunk, createAction } from "@reduxjs/toolkit";
+import absentService from "../Services/API/absentService";
+export const fetchAllAbsents = createAsyncThunk(
+    "absent/fetchAllAbsents",
+    async (_, thunkAPI) => {
+        try {
+            return await absentService.getListAbsent();
+        } catch (e) {
+            console.log("error", e);
+            return thunkAPI.rejectWithValue("something went wrong");
+        }
+    }
+);
 export const resetAbsentSlice = createAction("resetAbsentSlice");
 const initialState = {
     absentList: [],
