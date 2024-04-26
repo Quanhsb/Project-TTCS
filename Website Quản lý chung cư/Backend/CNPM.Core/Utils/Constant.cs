@@ -1,4 +1,4 @@
-﻿﻿namespace CNPM.Core.Utils
+﻿﻿﻿namespace CNPM.Core.Utils
 {
     public class Constant
     {
@@ -43,13 +43,10 @@
         public const string GET_LIST_TAM_TRU_FAILED = "Lấy danh sách tạm trú thất bại";
         public const string GET_LIST_TAM_VANG_SUCCESSFULLY = "Lấy danh sách tạm vắng thành công";
         public const string GET_LIST_TAM_VANG_FAILED = "Lấy danh sách tạm vắng thất bại";
-
         public const string GET_LIST_PHONG_SUCCESSFULLY = "Lấy danh sách phòng thành công";
         public const string GET_LIST_PHONG_FAILED = "Lấy danh sách phòng thất bại";
-
         public const string GET_NHAN_KHAU_SUCCESSFULLY = "Lấy thông tin nhân khẩu thành công";
         public const string GET_NHAN_KHAU_FAILED = "Lấy thông tin nhân khẩu thất bại";
-
         public const string GET_KHOAN_THU_SUCCESSFULLY = "Lấy thông tin khoản thu thành công";
         public const string GET_KHOAN_THU_FAILED = "Lấy thông tin khoản thu thất bại";
         public const string GET_KHOAN_THU_THEO_HO_SUCCESSFULLY = "Lấy thông tin khoản thu theo hộ thành công";
@@ -60,10 +57,8 @@
         public const string GET_TAM_TRU_FAILED = "Lấy thông tin tạm trú thất bại";
         public const string GET_TAM_VANG_SUCCESSFULLY = "Lấy thông tin tạm vắng thành công";
         public const string GET_TAM_VANG_FAILED = "Lấy thông tin tạm vắng thất bại";
-
         public const string GET_PHONG_SUCCESSFULLY = "Lấy thông tin phòng thành công";
         public const string GET_PHONG_FAILED = "Lấy thông tin phòng thất bại";
-
         public const string CREATE_NHAN_KHAU_SUCCESSFULLY = "Thêm mới nhân khẩu thành công";
         public const string CREATE_NHAN_KHAU_FAILED = "Thêm mới nhân khẩu thất bại";
         public const string REASON_CCCD_EXISTED = "Căn cước công dân đã tồn tại";
@@ -80,10 +75,8 @@
         public const string CREATE_TAM_VANG_SUCCESSFULLY = "Thêm mới tạm vắng thành công";
         public const string CREATE_TAM_VANG_FAILED = "Thêm mới tạm vắng thất bại";
         public const string REASON_NHAN_KHAU_TAM_VANG_EXISTED = "Nhân khẩu này đã đăng ký tạm vắng";
-
         public const string CREATE_PHONG_SUCCESSFULLY = "Thêm mới phòng thành công";
         public const string CREATE_PHONG_FAILED = "Thêm mới phòng thất bại";
-
         public const string UPDATE_NHAN_KHAU_SUCCESSFULLY = "Cập nhật thông tin nhân khẩu thành công";
         public const string UPDATE_NHAN_KHAU_FAILED = "Cập nhật thông tin nhân khẩu thất bại";
         public const string MA_NHAN_KHAU_NOT_EXIST = "Mã nhân khẩu không tồn tại";
@@ -97,22 +90,24 @@
         public const string UPDATE_TAM_VANG_SUCCESSFULLY = "Cập nhật thông tin tạm vắng thành công";
         public const string UPDATE_TAM_VANG_FAILED = "Cập nhật thông tin tạm vắng thất bại";
         public const string MA_TAM_VANG_NOT_EXIST = "Mã tạm vắng không tồn tại";
-
         public const string UPDATE_PHONG_SUCCESSFULLY = "Cập nhật thông tin phòng thành công";
         public const string UPDATE_PHONG_FAILED = "Cập nhật thông tin phòng thất bại";
         public const string MA_PHONG_NOT_EXIST = "Mã phòng không tồn tại";
-
         public const string UPDATE_HO_KHAU_SUCCESSFULLY = "Cập nhật thông tin hộ khẩu thành công";
         public const string UPDATE_HO_KHAU_FAILED = "Cập nhật thông tin hộ khẩu thất bại";
         public const string MA_HO_KHAU_NOT_EXIST = "Mã hộ khẩu không tồn tại";
 
         public const string ADD_XE_SUCCESSFULLY = "Thêm xe thành công";
         public const string ADD_XE_FAILED = "Thêm xe thất bại";
+        public const string UPDATE_XE_SUCCESSFULLY = "Cập nhật thông tin xe thành công";
+        public const string UPDATE_XE_FAILED = "Cập nhật thông tin xe thất bại";
+        public const string REMOVE_XE_SUCCESSFULLY = "Xóa xe thành công";
+        public const string REMOVE_XE_FAILED = "Xóa xe thất bại";
         public const string XE_EXISTED = "Xe đã tồn tại";
+        public const string XE_IS_NOT_EXIST = "Xe không tồn tại";
 
         public const string DELETE_NHAN_KHAU_SUCCESSFULLY = "Xóa thông tin nhân khẩu thành công";
         public const string DELETE_NHAN_KHAU_FAILED = "Xoá thông tin nhân khẩu thất bại";
-
         public const string DELETE_KHOAN_THU_SUCCESSFULLY = "Xóa thông tin khoản thu thành công";
         public const string DELETE_KHOAN_THU_FAILED = "Xoá thông tin khoản thu thất bại";
         public const string DELETE_HO_KHAU_SUCCESSFULLY = "Xóa thông tin hộ khẩu thành công";
@@ -121,22 +116,16 @@
         public const string DELETE_TAM_TRU_FAILED = "Xoá thông tin tạm trú thất bại";
         public const string DELETE_TAM_VANG_SUCCESSFULLY = "Xóa thông tin tạm vắng thành công";
         public const string DELETE_TAM_VANG_FAILED = "Xoá thông tin tạm vắng thất bại";
-
         public const string DELETE_PHONG_SUCCESSFULLY = "Xóa thông tin phòng thành công";
         public const string DELETE_PHONG_FAILED = "Xoá thông tin phòng thất bại";
-
         public const string THANH_TOAN_SUCCESSFULLY = "Thanh toán thành công";
         public const string THANH_TOAN_FAILED = "Thanh toán thất bại";
-
         public const string LOGOUT_FAILED = "Đăng xuất thất bại";
         public const string DEFAULT_PASSWORD = "123456";
         public const int RANDOM_DEFAULT_PASSWORD_LENGTH = 6;
         public const string Administrator = "1";
         public const string Manager = "2";
         public const string Stocker = "3";
-
-
-
         public const string CONNECTION_STRING = @"
                 Data Source=localhost;
                 Initial Catalog=CNPM;

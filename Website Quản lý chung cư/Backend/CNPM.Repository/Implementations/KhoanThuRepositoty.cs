@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +13,6 @@ using CNPM.Core.Models.NhanKhau;
 using System.ComponentModel.DataAnnotations;
 using CNPM.Core.Models.KhoanThu;
 using Newtonsoft.Json.Linq;
-
 namespace CNPM.Repository.Implementations
 {
     public class KhoanThuRepository : IKhoanThuRepository
@@ -60,11 +59,9 @@ namespace CNPM.Repository.Implementations
                 _dbcontext.KhoanThu.Add(khoanThu);
                 int number_rows = _dbcontext.SaveChanges();
                 if (number_rows <= 0) return -1;
-
                 var listHoKhau = _dbcontext.HoKhau.Where(o => o.Delete == Constant.NOT_DELETE).ToList();
                 List<PhiSinhHoat> dsPhiSinhHoat = null;
                 if (khoanThu.LoaiKhoanThu == 1) dsPhiSinhHoat = JObject.Parse(khoanThu.ChiTiet).ToObject<List<PhiSinhHoat>>();
-
                 foreach (var hoKhau in listHoKhau)
                 {
                     KhoanThuTheoHoEntity khoanThuTheoHo = new KhoanThuTheoHoEntity();
@@ -74,25 +71,26 @@ namespace CNPM.Repository.Implementations
                     khoanThuTheoHo.UserUpdate = khoanThu.UserUpdate;
                     khoanThuTheoHo.CreateTime = DateTime.Now;
                     khoanThuTheoHo.UpdateTime = DateTime.Now;
-
+                    
                     PhiDichVu phiDichVu = JObject.Parse(khoanThu.ChiTiet).ToObject<PhiDichVu>();
                     PhiGuiXe phiGuiXe = JObject.Parse(khoanThu.ChiTiet).ToObject<PhiGuiXe>();
                     PhiQuanLy phiQuanLy = JObject.Parse(khoanThu.ChiTiet).ToObject<PhiQuanLy>();
-
                     // Access the deserialized object
                     if (khoanThu.LoaiKhoanThu == 1)
                     {
                         var phiSinhHoat = dsPhiSinhHoat.Find(o => o.MaHoKhau == hoKhau.MaHoKhau);
-                        khoanThuTheoHo.SoTien = phiSinhHoat.Dien + phiSinhHoat.Nuoc;
+                        khoanThuTheoHo.SoTien = phiSinhHoat.Dien + phiSinhHoat.Nuoc + phiSinhHoat.Internet;
                     }
                     else if (khoanThu.LoaiKhoanThu == 2)
                     {
                         var phong = _dbcontext.Phong.Where(o => o.Delete == Constant.NOT_DELETE && o.MaHoKhau == hoKhau.MaHoKhau).FirstOrDefault();
+                        if (phong == null) continue;
                         khoanThuTheoHo.SoTien = (int)Math.Ceiling(phiDichVu.DichVu.SoTien * phong.DienTich);
                     }
                     else if (khoanThu.LoaiKhoanThu == 3)
                     {
                         var phong = _dbcontext.Phong.Where(o => o.Delete == Constant.NOT_DELETE && o.MaHoKhau == hoKhau.MaHoKhau).FirstOrDefault();
+                        if (phong == null) continue;
                         khoanThuTheoHo.SoTien = (int)Math.Ceiling(phiQuanLy.QuanLy.SoTien * phong.DienTich);
                     }
                     else if (khoanThu.LoaiKhoanThu == 4)
@@ -216,7 +214,6 @@ namespace CNPM.Repository.Implementations
                     khoanThu.UserUpdate = userNameUpdate;
                     khoanThu.UpdateTime = DateTime.Now;
                     khoanThu.Version++;
-                    // xóa các khoản thu theo hộ ứng với mã khoản thu 
                     // xóa các khoản thu theo hộ ứng với mã khoản thu
                     var listKhoanThuTheoHo = _dbcontext.KhoanThuTheoHo.Where(o => o.MaKhoanThu == maKhoanThu && o.Delete == Constant.NOT_DELETE).ToList();
                     foreach (var khoanThuTheoHo in listKhoanThuTheoHo)

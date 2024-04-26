@@ -9,7 +9,6 @@ using Microsoft.EntityFrameworkCore;
 using CNPM.Core.Utils;
 using CNPM.Core.Models;
 using System.ComponentModel.DataAnnotations;
-
 namespace CNPM.Repository.Implementations
 {
     public class XeRepository : IXeRepository
@@ -27,7 +26,6 @@ namespace CNPM.Repository.Implementations
                 }
                 else arr = _dbcontext.Xe.Where(
                     o => o.Delete == Constant.NOT_DELETE).Skip(limit * (index - 1)).Take(limit).ToList();
-
                 return arr;
             }
             catch(Exception ex)
@@ -35,7 +33,21 @@ namespace CNPM.Repository.Implementations
                 throw new Exception(ex.Message);
             }
         }
-
+        public List<XeEntity> GetListXeByHoKhau(string maHoKhau)
+        {
+            try
+            {
+                var _dbcontext = new MyDbContext();
+                List<XeEntity> arr = _dbcontext.Xe.Where(
+                    o => o.Delete == Constant.NOT_DELETE & o.MaHoKhau == maHoKhau).ToList();
+                
+                return arr;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public XeEntity GetXe(int maXe)
         {
             try
@@ -56,7 +68,7 @@ namespace CNPM.Repository.Implementations
             {
                 var _dbcontext = new MyDbContext();
                 XeEntity xe = _dbcontext.Xe.Where(
-                    o => o.Delete == Constant.NOT_DELETE && o.BienKhiemSoat == bienKhiemSoat).FirstOrDefault();
+                    o => o.Delete == Constant.NOT_DELETE && o.BienKiemSoat == bienKhiemSoat).FirstOrDefault();
                 return xe;
             }
             catch (Exception ex)
@@ -70,13 +82,10 @@ namespace CNPM.Repository.Implementations
             {
                 var _dbcontext = new MyDbContext();
                 _dbcontext.Xe.Add(xe);
-
                 int number_rows = _dbcontext.SaveChanges();
-
                 if (number_rows <= 0) return -1;
-
                 XeEntity xeCreated = _dbcontext.Xe.Where(
-                    o => o.Delete == Constant.NOT_DELETE && o.BienKhiemSoat == xe.BienKhiemSoat).FirstOrDefault();
+                    o => o.Delete == Constant.NOT_DELETE && o.BienKiemSoat == xe.BienKiemSoat).FirstOrDefault();
                 return xeCreated.MaXe;
             }
             catch (Exception ex)
@@ -91,21 +100,19 @@ namespace CNPM.Repository.Implementations
                 var _dbcontext = new MyDbContext();
                 var xe = _dbcontext.Xe.FirstOrDefault(
                     o => o.MaXe == newXe.MaXe && o.Delete == Constant.NOT_DELETE);
-
                 if (xe != null)
                 {
                     xe.UserUpdate = newXe.UserUpdate;
                     xe.UpdateTime = newXe.UpdateTime;
-                    xe.BienKhiemSoat = newXe.BienKhiemSoat;
+                    xe.BienKiemSoat = newXe.BienKiemSoat;
                     xe.MaLoaiXe = newXe.MaLoaiXe;
-                    xe.MaHoKhau = newXe.MaHoKhau;
-                    xe.MoTa = xe.MoTa;
+                    xe.MoTa = newXe.MoTa;
+                    xe.TenXe = newXe.TenXe;
                     xe.Version = newXe.Version + 1;
                     _dbcontext.SaveChanges();
                     return true;
                 }
                 return false;
-
             }
             catch (Exception ex)
             {
