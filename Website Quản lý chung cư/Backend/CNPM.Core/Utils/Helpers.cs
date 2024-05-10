@@ -1,4 +1,4 @@
-﻿using CNPM.Core.Models;
+﻿﻿using CNPM.Core.Models;
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using Microsoft.AspNetCore.Authentication;
@@ -21,7 +21,6 @@ namespace CNPM.Core.Utils
             if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password)) return true;
             return false;
         }
-        
         public static bool CheckEmptyOrNullUserData(string userName)
         {
             if (string.IsNullOrEmpty(userName)) return true;
@@ -30,10 +29,10 @@ namespace CNPM.Core.Utils
         public static bool CheckValidUserData(UserDto1005 userData)
         {
             if (string.IsNullOrEmpty(userData.UserName)
-              || string.IsNullOrEmpty(userData.FirstName)
-              || string.IsNullOrEmpty(userData.LastName)
+             || string.IsNullOrEmpty(userData.FirstName)
+             || string.IsNullOrEmpty(userData.LastName)
                ) return true;
-            return false;   
+            return false;
         }
         public static string GetHashPassword(string password)
         {
@@ -46,14 +45,13 @@ namespace CNPM.Core.Utils
             {
                 return BCrypt.Net.BCrypt.Verify(oPassword, password);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                return false;
+                throw new Exception(ex.Message);
             }
         }
         public static string DecodeJwt(string jwt, string type)
         {
-            
             var handler = new JwtSecurityTokenHandler();
             var jsonToken = handler.ReadToken(jwt);
             var tokenS = jsonToken as JwtSecurityToken;

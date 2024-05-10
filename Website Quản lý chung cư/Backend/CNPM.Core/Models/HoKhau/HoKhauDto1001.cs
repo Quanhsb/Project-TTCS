@@ -1,4 +1,4 @@
-﻿using CNPM.Core.Entities;
+﻿﻿using CNPM.Core.Entities;
 using CNPM.Core.Models.NhanKhau;
 using CNPM.Core.Utils;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -44,4 +44,3 @@ namespace CNPM.Core.Models.HoKhau
         public int Version { get; set; }
     }
 }
-

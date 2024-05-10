@@ -10,23 +10,22 @@ using System.Text;
 using System.Threading.Tasks;
 namespace CNPM.Core.Models.Xe
 {
-    public class XeDto1000 // body create
+    public class XeDto1000
     {
         [MaxLength(100)]
         [Required]
         [JsonProperty("tenXe")]
-        public string TenXe { get; set; }
+        public string? TenXe { get; set; }
         [MaxLength(200)]
         [Required]
         [JsonProperty("bienKiemSoat")]
-        public string BienKiemSoat { get; set; }
-
+        public string? BienKiemSoat { get; set; }
         [Required]
         [JsonProperty("maLoaiXe")]
-        public string MaLoaiXe { get; set; }
+        public string? MaLoaiXe { get; set; }
         [Required]
         [JsonProperty("maHoKhau")]
-        public string MaHoKhau { get; set; }
+        public string? MaHoKhau { get; set; }
         [JsonProperty("moTa")]
         public string? MoTa { get; set; }
     }

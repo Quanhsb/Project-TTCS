@@ -1,4 +1,4 @@
-﻿using CNPM.Core.Entities;
+﻿﻿using CNPM.Core.Entities;
 using CNPM.Core.Utils;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Newtonsoft.Json;
@@ -30,4 +30,3 @@ namespace CNPM.Core.Models.CanHo
         public string? MoTa { get; set; }
     }
 }
-

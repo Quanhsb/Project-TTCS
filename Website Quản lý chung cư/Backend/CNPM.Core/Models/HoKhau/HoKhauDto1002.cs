@@ -1,4 +1,4 @@
-﻿using CNPM.Core.Utils;
+﻿﻿using CNPM.Core.Utils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -28,4 +28,3 @@ namespace CNPM.Core.Models.HoKhau
         public int Version { get; set; }
     }
 }
-

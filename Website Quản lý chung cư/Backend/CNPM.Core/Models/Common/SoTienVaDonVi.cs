@@ -1,4 +1,4 @@
-﻿﻿using CNPM.Core.Entities;
+﻿﻿﻿using CNPM.Core.Entities;
 using CNPM.Core.Utils;
 using Newtonsoft.Json;
 using System;
@@ -8,7 +8,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace CNPM.Core.Models.Common
 {
     public class SoTienAndDonVi
@@ -16,6 +15,6 @@ namespace CNPM.Core.Models.Common
         [JsonProperty("soTien")]
         public int SoTien;
         [JsonProperty("donVi")]
-        public string DonVi;
+        public string? DonVi;
     }
 }

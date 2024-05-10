@@ -1,4 +1,4 @@
-﻿using CNPM.Core.Utils;
+﻿﻿using CNPM.Core.Utils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -26,4 +26,3 @@ namespace CNPM.Core.Models.NhanKhau
         public int TrangThai { get; set; }
     }
 }
-

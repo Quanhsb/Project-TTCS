@@ -1,0 +1,12 @@
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Core\bin\Debug\net6.0\CNPM.Core.deps.json
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Core\bin\Debug\net6.0\CNPM.Core.dll
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Core\bin\Debug\net6.0\CNPM.Core.pdb
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Core\obj\Debug\net6.0\CNPM.Core.csproj.AssemblyReference.cache
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Core\obj\Debug\net6.0\CNPM.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Core\obj\Debug\net6.0\CNPM.Core.AssemblyInfoInputs.cache
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Core\obj\Debug\net6.0\CNPM.Core.AssemblyInfo.cs
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Core\obj\Debug\net6.0\CNPM.Core.csproj.CoreCompileInputs.cache
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Core\obj\Debug\net6.0\CNPM.Core.dll
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Core\obj\Debug\net6.0\refint\CNPM.Core.dll
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Core\obj\Debug\net6.0\CNPM.Core.pdb
+C:\Users\tuana\OneDrive\Documents\ApartmentManagement-main\Backend\CNPM.Core\obj\Debug\net6.0\ref\CNPM.Core.dll

@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 namespace CNPM.Core.Entities
 {
@@ -8,21 +8,17 @@ namespace CNPM.Core.Entities
         [Key]
         [Required]
         public int MaTamTru { get; set; }
-
         [Required]
         [StringLength(100)]
-        public string HoTen { get; set; }
-
+        public string? HoTen { get; set; }
         [Required]
         [StringLength(100)]
-        public string DiaChiThuongTru { get; set; }
-
+        public string? DiaChiThuongTru { get; set; }
         [Required]
         [StringLength(100)]
-        public string DiaChiTamTru { get; set; }
-
+        public string? DiaChiTamTru { get; set; }
         [Required]
         [StringLength(20)]
-        public string CanCuocCongDan { get; set; }
+        public string? CanCuocCongDan { get; set; }
     }
 }

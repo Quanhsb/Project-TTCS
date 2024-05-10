@@ -11,17 +11,15 @@ using System.Text;
 using System.Threading.Tasks;
 namespace CNPM.Core.Models.KhoanThu
 {
-    public class PhiSinhHoat // khoan thu phi sinh hoạt
+    public class PhiSinhHoat
     {
         [JsonProperty("maHoKhau")]
-        public string MaHoKhau { get; set; }
+        public string? MaHoKhau { get; set; }
         [JsonProperty("dien")]
         public int Dien { get; set; }
         [JsonProperty("nuoc")]
         public int Nuoc { get; set; }
-
         [JsonProperty("internet")]
         public int Internet { get; set; }
-
     }
 }

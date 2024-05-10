@@ -1,4 +1,4 @@
-﻿﻿using CNPM.Core.Entities;
+﻿﻿﻿using CNPM.Core.Entities;
 using CNPM.Core.Models.Common;
 using CNPM.Core.Utils;
 using Newtonsoft.Json;
@@ -9,13 +9,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace CNPM.Core.Models.KhoanThu
 {
-    public class PhiQuanLy // khoan thu quan ly
+    public class PhiQuanLy
     {
         [JsonProperty("quanLy")]
-        public SoTienAndDonVi QuanLy { get; set; }
-
+        public SoTienAndDonVi? QuanLy { get; set; }
     }
 }

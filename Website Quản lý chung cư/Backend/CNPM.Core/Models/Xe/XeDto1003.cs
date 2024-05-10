@@ -1,4 +1,4 @@
-﻿﻿using CNPM.Core.Utils;
+﻿﻿﻿using CNPM.Core.Utils;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,21 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 namespace CNPM.Core.Models.Xe
 {
-    public class XeDto1003 // body get list
+    public class XeDto1003
     {
         [JsonProperty("maXe")]
         public int MaXe { get; set; }
         [JsonProperty("tenXe")]
-        public string TenXe { get; set; }
-
+        public string? TenXe { get; set; }
         [JsonProperty("bienKiemSoat")]
-        public string BienKiemSoat { get; set; }
-
+        public string? BienKiemSoat { get; set; }
         [JsonProperty("maLoaiXe")]
-        public string MaLoaiXe { get; set; }
+        public string? MaLoaiXe { get; set; }
         [JsonProperty("maHoKhau")]
-        public string MaHoKhau { get; set; }
+        public string? MaHoKhau { get; set; }
         [JsonProperty("moTa")]
-        public string MoTa { get; set; }
+        public string? MoTa { get; set; }
     }
 }

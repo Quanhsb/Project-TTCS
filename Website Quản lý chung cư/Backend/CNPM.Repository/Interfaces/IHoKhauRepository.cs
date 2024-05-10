@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,13 +11,13 @@ namespace CNPM.Repository.Interfaces
     {
         public List<HoKhauEntity> GetListHoKhau(int index, int limit);
         public HoKhauEntity GetHoKhau(string maHoKhau);
-        public List<LichSuEntity> GetLichSu(string maHoKhau);
         public string CreateHoKhau(HoKhauEntity hoKhau);
         public string UpdateHoKhau(HoKhauEntity hoKhau);
         public bool CheckMaHoKhauExisted(string maHoKhau);
         public bool DeleteHoKhau(string maHoKhau, string userName);
         public bool AddNhanKhauToHoKhau(List<int> danhSachNhanKhau, string maHoKhau, string userName);
-        public bool AddPhongToHoKhau(string maHoKhau, int maPhong, string userName);
+        public bool AddCanHoToHoKhau(string maHoKhau, int maCanHo, string userName);
+        public bool RemoveCanHoFromHoKhau(string maHoKhau, string userName);
         public bool RemoveNhanKhauFromHoKhau(string maHoKhau, string userName);
     }
 }

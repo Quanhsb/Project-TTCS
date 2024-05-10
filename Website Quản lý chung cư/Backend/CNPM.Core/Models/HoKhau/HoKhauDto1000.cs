@@ -1,4 +1,4 @@
-﻿using CNPM.Core.Utils;
+﻿﻿using CNPM.Core.Utils;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Newtonsoft.Json;
 using System;
@@ -31,4 +31,3 @@ namespace CNPM.Core.Models.HoKhau
         public List<int>? DanhSachNhanKhau { get; set; }
     }
 }
-

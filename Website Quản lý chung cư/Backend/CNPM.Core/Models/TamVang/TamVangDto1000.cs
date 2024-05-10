@@ -1,4 +1,4 @@
-﻿using CNPM.Core.Entities;
+﻿﻿using CNPM.Core.Entities;
 using CNPM.Core.Utils;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Newtonsoft.Json;
@@ -25,4 +25,3 @@ namespace CNPM.Core.Models.TamVang
         public string? LyDo { get; set; }
     }
 }
-

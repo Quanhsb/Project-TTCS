@@ -1,4 +1,4 @@
-﻿﻿using CNPM.Core.Models;
+﻿﻿﻿using CNPM.Core.Models;
 using CNPM.Repository.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -26,7 +26,7 @@ namespace CNPM.Service.Implementations
         private readonly IHoKhauRepository _hoKhauRepository;
         private readonly ITamVangRepository _tamVangRepository;
         private readonly IMapper _mapper;
-        public KhoanThuService(IKhoanThuRepository khoanThuRepository, 
+        public KhoanThuService(IKhoanThuRepository khoanThuRepository,
             IHoKhauRepository hoKhauRepository,
             ITamVangRepository tamVangRepository)
         {
@@ -38,7 +38,6 @@ namespace CNPM.Service.Implementations
                 cfg.AddProfile(new MappingProfile());
             });
             _mapper = config.CreateMapper();
-            
         }
         public IActionResult GetListKhoanThu(int index, int limit)
         {
@@ -61,7 +60,8 @@ namespace CNPM.Service.Implementations
         }
         public IActionResult GetKhoanThu(int maKhoanThu)
         {
-            try { 
+            try
+            {
                 KhoanThuEntity khoanThu = _khoanThuRepository.GetKhoanThu(maKhoanThu);
                 if (khoanThu == null) return new BadRequestObjectResult(
                        new
@@ -71,7 +71,8 @@ namespace CNPM.Service.Implementations
                        }
                     );
                 var khoanThu1001 = _mapper.Map<KhoanThuEntity, KhoanThuDto1001>(khoanThu);
-                return new OkObjectResult(new {
+                return new OkObjectResult(new
+                {
                     message = Constant.GET_KHOAN_THU_SUCCESSFULLY,
                     data = khoanThu1001
                 });
@@ -86,7 +87,6 @@ namespace CNPM.Service.Implementations
             try
             {
                 var userName = Helpers.DecodeJwt(token, "username");
-                // check ho khau
                 KhoanThuEntity khoanThu = _mapper.Map<KhoanThuDto1000, KhoanThuEntity>(khoanThu1000);
                 khoanThu.CreateTime = DateTime.Now;
                 khoanThu.UpdateTime = DateTime.Now;
@@ -168,7 +168,6 @@ namespace CNPM.Service.Implementations
             try
             {
                 var userName = Helpers.DecodeJwt(token, "username");
-                // check ho khau
                 KhoanThuEntity khoanThu = _khoanThuRepository.GetKhoanThu(maKhoanThu);
                 if (khoanThu != null)
                 {
@@ -179,7 +178,6 @@ namespace CNPM.Service.Implementations
                         data = new { maKhoanThu = maKhoanThu }
                     });
                 }
-                
                 return new BadRequestObjectResult(new
                 {
                     message = Constant.CREATE_KHOAN_THU_THEO_HO_FAILED
@@ -202,7 +200,7 @@ namespace CNPM.Service.Implementations
                     KhoanThuDto1005 khoanThu = new KhoanThuDto1005();
                     khoanThu.MaHoKhau = maHoKhau;
                     khoanThu.MaKhoanThu = khoanThuEntity.MaKhoanThu;
-                    khoanThu.TenKhoanThu = khoanThuEntity.TenKhoanThu;
+                    khoanThu.TenKhoanThu = khoanThuEntity.TenKhoanThu!;
                     khoanThu.SoTien = khoanThuTheoHo.SoTien;
                     khoanThu.MaKhoanThuTheoHo = khoanThuTheoHo.MaKhoanThuTheoHo;
                     khoanThu.LoaiKhoanThu = khoanThuEntity.LoaiKhoanThu;
@@ -215,7 +213,6 @@ namespace CNPM.Service.Implementations
                     khoanThu.SoTienDaNop = soTienDaNop;
                     arr.Add(khoanThu);
                 }
-           
                 return new OkObjectResult(new
                 {
                     message = Constant.GET_KHOAN_THU_THEO_HO_SUCCESSFULLY,
@@ -243,7 +240,6 @@ namespace CNPM.Service.Implementations
                     message = Constant.UPDATE_KHOAN_THU_FAILED,
                     reason = Constant.DATA_UPDATED_BEFORE
                 });
-                // check ho khau ton tai
                 KhoanThuEntity khoanThuEntity = _mapper.Map<KhoanThuDto1002, KhoanThuEntity>(newKhoanThu);
                 khoanThuEntity.MaKhoanThu = maKhoanThu;
                 khoanThuEntity.UserUpdate = userName;

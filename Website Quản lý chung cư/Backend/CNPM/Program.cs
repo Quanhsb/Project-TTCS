@@ -76,4 +76,3 @@ app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 app.MapControllers();
 app.UseSwaggerUI();
 app.Run();
-

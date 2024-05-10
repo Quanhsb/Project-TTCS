@@ -1,4 +1,4 @@
-﻿using CNPM.Core.Utils;
+﻿﻿using CNPM.Core.Utils;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Newtonsoft.Json;
 using System;
@@ -30,4 +30,3 @@ namespace CNPM.Core.Models.TamTru
         public string? CanCuocCongDan { get; set; }
     }
 }
-

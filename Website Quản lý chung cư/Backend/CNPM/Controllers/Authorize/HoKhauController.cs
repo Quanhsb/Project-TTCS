@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using CNPM.Service.Interfaces;
 using CNPM.Core.Models;
@@ -11,7 +11,6 @@ using CNPM.Core.Models.HoKhau;
 using CNPM.Core.Models.Xe;
 namespace CNPM.Controllers.Authorize
 {
-    //[VerifyToken]
     [Authorize]
     [ApiController]
     [Route(Constant.API_BASE)]
@@ -62,21 +61,12 @@ namespace CNPM.Controllers.Authorize
         }
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme,
         Roles = Constant.Administrator + ", " + Constant.Manager)]
-        [HttpPost("ho-khau/add-phong-to-ho-khau")]
-        public IActionResult AddPhongToHoKhau(string maHoKhau, int maPhong)
+        [HttpPost("ho-khau/add-can-ho-to-ho-khau")]
+        public IActionResult AddCanHoToHoKhau(string maHoKhau, int maCanHo)
         {
             var token = Request.Headers["Authorization"].ToString().Replace("Bearer ", string.Empty);
-            return _hoKhauService.AddPhongToHoKhau(token, maHoKhau, maPhong);
+            return _hoKhauService.AddCanHoToHoKhau(token, maHoKhau, maCanHo);
         }
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme,
-        Roles = Constant.Administrator + ", " + Constant.Manager)]
-        [HttpPost("ho-khau/remove-phong-from-ho-khau")]
-        public IActionResult RemovePhongFromHoKhau(string maHoKhau)
-        {
-            var token = Request.Headers["Authorization"].ToString().Replace("Bearer ", string.Empty);
-            return _hoKhauService.RemovePhongFromHoKhau(token, maHoKhau);
-        }
-
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme,
         Roles = Constant.Administrator + ", " + Constant.Manager)]
         [HttpPost("ho-khau/add-xe")]
@@ -89,7 +79,6 @@ namespace CNPM.Controllers.Authorize
             var token = Request.Headers["Authorization"].ToString().Replace("Bearer ", string.Empty);
             return _hoKhauService.AddXeToHoKhau(token, xe);
         }
-
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme,
         Roles = Constant.Administrator + ", " + Constant.Manager)]
         [HttpPost("ho-khau/update-xe")]
@@ -102,7 +91,6 @@ namespace CNPM.Controllers.Authorize
             var token = Request.Headers["Authorization"].ToString().Replace("Bearer ", string.Empty);
             return _hoKhauService.UpdateXe(token, maXe, xe);
         }
-
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme,
         Roles = Constant.Administrator + ", " + Constant.Manager)]
         [HttpPost("ho-khau/remove-xe")]

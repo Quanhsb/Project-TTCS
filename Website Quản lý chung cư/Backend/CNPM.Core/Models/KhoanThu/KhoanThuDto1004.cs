@@ -1,4 +1,4 @@
-﻿using CNPM.Core.Entities;
+﻿﻿using CNPM.Core.Entities;
 using CNPM.Core.Utils;
 using Newtonsoft.Json;
 using System;
@@ -22,4 +22,3 @@ namespace CNPM.Core.Models.KhoanThu
         public int SoTienDaNop { get; set; }
     }
 }
-
